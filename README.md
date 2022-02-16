@@ -15,6 +15,10 @@ This is a chatbot which will calculate you BMI (Basal Metabolic Index) and give 
 - BMI calculations cannot distinguish muscle and fat weight.
 - BMI is used differently for children.
 
+## To use this Bot
+- You need to have an Azure Subscription
+- You can download the code and open the file in Bot framework composer and test it in web chat or emulator...
+
 
 [1]:https://github.com/microsoft/BotFramework-Composer/blob/main/README.md
 [2]:https://docs.microsoft.com/en-us/composer/how-to-create-custom-actions#:~:text=1%20Open%20the%20bot%20in%20Composer.%20Select%20a,to%20test%20the%20bot%20in%20Web%20Chat.%20
