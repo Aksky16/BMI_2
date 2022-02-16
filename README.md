@@ -3,8 +3,8 @@ This is a chatbot which will calculate you BMI (Basal Metabolic Index) and give 
 
 ## Details
 - Made using Bot Framework composer.(Download Bot Framework composer [here][1])
-- A Custom Action called BMI was created in order to calculate the BMI.(Learn how to create custom actions [here][2])
-- Tested in web chat and Bot Framework emulator.(Download Bot Framework emulator [here][3])
+- A Custom Action called [BMI][2] was created in order to calculate the BMI.(Learn how to create custom actions [here][3])
+- Tested in web chat and Bot Framework emulator.(Download Bot Framework emulator [here][4])
 
 ## What is BMI?
 - Body mass index (BMI) is a value derived from the weight and height of a person. 
@@ -21,5 +21,6 @@ This is a chatbot which will calculate you BMI (Basal Metabolic Index) and give 
 
 
 [1]:https://github.com/microsoft/BotFramework-Composer/blob/main/README.md
-[2]:https://docs.microsoft.com/en-us/composer/how-to-create-custom-actions#:~:text=1%20Open%20the%20bot%20in%20Composer.%20Select%20a,to%20test%20the%20bot%20in%20Web%20Chat.%20
-[3]:https://github.com/microsoft/BotFramework-Emulator
+[2]:https://github.com/Aksky16/BMI_2/tree/master/BMI
+[3]:https://docs.microsoft.com/en-us/composer/how-to-create-custom-actions#:~:text=1%20Open%20the%20bot%20in%20Composer.%20Select%20a,to%20test%20the%20bot%20in%20Web%20Chat.%20
+[4]:https://github.com/microsoft/BotFramework-Emulator
