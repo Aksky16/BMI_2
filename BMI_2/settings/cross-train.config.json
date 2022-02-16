@@ -1,0 +1,13 @@
+{
+  "BMI_2.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "": [
+        "BMI.en-us"
+      ],
+      "BMI": [
+        "BMI.en-us"
+      ]
+    }
+  }
+}

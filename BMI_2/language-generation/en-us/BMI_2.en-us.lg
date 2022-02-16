@@ -1,0 +1,23 @@
+[import](common.lg)
+
+# SendActivity_DidNotUnderstand()
+[Activity
+    Text = ${SendActivity_DidNotUnderstand_text()}
+]
+
+# SendActivity_DidNotUnderstand_text()
+- Sorry, I didn't get that.
+# ChoiceInput_Prompt_AZu8IH()
+[Activity
+    Text = ${ChoiceInput_Prompt_AZu8IH_text()}
+]
+
+# ChoiceInput_Prompt_AZu8IH_text()
+- Click to start BMI Calculator.
+# SendActivity_ava5oF()
+[Activity
+    Text = ${SendActivity_ava5oF_text()}
+]
+
+# SendActivity_ava5oF_text()
+- Hi

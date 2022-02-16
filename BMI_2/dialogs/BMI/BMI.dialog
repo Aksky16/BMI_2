@@ -1,0 +1,298 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "ZLiQXW",
+    "name": "BMI",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "wVLj7t"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.NumberInput",
+          "$designer": {
+            "id": "ztO0DQ"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${NumberInput_Prompt_ztO0DQ()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "dialog.age",
+          "outputFormat": "=this.value",
+          "value": "=dialog.age"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "sF9Gvi"
+          },
+          "condition": "=dialog.age < 14 || dialog.age > 90",
+          "actions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "PFnti5"
+              },
+              "condition": "=dialog.age < 0 || dialog.age > 110",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "g0ysx8"
+                  },
+                  "activity": "${SendActivity_g0ysx8()}"
+                },
+                {
+                  "$kind": "Microsoft.RepeatDialog",
+                  "$designer": {
+                    "id": "cQ7Vam"
+                  },
+                  "activityProcessed": true,
+                  "allowLoop": true
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "WgrIGS"
+                  },
+                  "condition": "=dialog.age < 14",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "h88z1o"
+                      },
+                      "activity": "${SendActivity_h88z1o()}"
+                    },
+                    {
+                      "$kind": "Microsoft.EndDialog",
+                      "$designer": {
+                        "id": "aH846W"
+                      }
+                    }
+                  ],
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.IfCondition",
+                      "$designer": {
+                        "id": "qspilc"
+                      },
+                      "condition": "=dialog.age > 90",
+                      "actions": [
+                        {
+                          "$kind": "Microsoft.SendActivity",
+                          "$designer": {
+                            "id": "V2KoY9"
+                          },
+                          "activity": "${SendActivity_V2KoY9()}"
+                        },
+                        {
+                          "$kind": "Microsoft.EndDialog",
+                          "$designer": {
+                            "id": "poQA0v"
+                          }
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.NumberInput",
+          "$designer": {
+            "id": "qkuD4D"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${NumberInput_Prompt_qkuD4D()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "dialog.height",
+          "outputFormat": "=this.value",
+          "value": "=dialog.height"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "YlrvQp"
+          },
+          "condition": "=dialog.height <142.2 || dialog.height > 210.8",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "4sibCe"
+              },
+              "activity": "${SendActivity_4sibCe()}"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "elDixu"
+              }
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.NumberInput",
+          "$designer": {
+            "id": "xELf1y"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "prompt": "${NumberInput_Prompt_xELf1y()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "dialog.weight",
+          "outputFormat": "=this.value",
+          "value": "=dialog.weight"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "gkdn7B"
+          },
+          "condition": "=dialog.weight < 41 || dialog.weight > 132",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "ERujcc"
+              },
+              "activity": "${SendActivity_ERujcc()}"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "uW74YM"
+              }
+            }
+          ]
+        },
+        {
+          "$kind": "BMI",
+          "$designer": {
+            "id": "91u5Ix"
+          },
+          "Height": "=dialog.height",
+          "Weight": "=dialog.weight",
+          "resultProperty": "dialog.result"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "4neoO8"
+          },
+          "condition": "=dialog.result < 18.5",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "TXvtIX"
+              },
+              "condition": "=dialog.result >= 18.5 && dialog.result < 24.9",
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "yc5oC8"
+                  },
+                  "condition": "=dialog.result >= 25 && dialog.result <= 29.9",
+                  "elseActions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "qW7e9H"
+                      },
+                      "activity": "${SendActivity_qW7e9H()}"
+                    },
+                    {
+                      "$kind": "Microsoft.EndDialog",
+                      "$designer": {
+                        "id": "UvefRQ"
+                      }
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "NbUYcY"
+                      },
+                      "activity": "${SendActivity_NbUYcY()}"
+                    },
+                    {
+                      "$kind": "Microsoft.EndDialog",
+                      "$designer": {
+                        "id": "dSZFc6"
+                      }
+                    }
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "iClckO"
+                  },
+                  "activity": "${SendActivity_iClckO()}"
+                },
+                {
+                  "$kind": "Microsoft.EndDialog",
+                  "$designer": {
+                    "id": "h7i9c9"
+                  }
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "m0bFeZ"
+              },
+              "activity": "${SendActivity_m0bFeZ()}"
+            },
+            {
+              "$kind": "Microsoft.EndDialog",
+              "$designer": {
+                "id": "GiLgLH"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "BMI.lg",
+  "recognizer": "BMI.lu.qna",
+  "id": "BMI"
+}

@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.MultiLanguageRecognizer",
+  "id": "LUIS_BMI_2",
+  "recognizers": {
+    "en-us": "BMI_2.en-us.lu",
+    "": "BMI_2.en-us.lu"
+  }
+}

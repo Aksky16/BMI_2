@@ -1,0 +1,86 @@
+[import](common.lg)
+
+# NumberInput_Prompt_qkuD4D_text()
+- Enter height:
+# NumberInput_Prompt_qkuD4D()
+[Activity
+    Text = ${NumberInput_Prompt_qkuD4D_text()}
+]
+
+# NumberInput_Prompt_xELf1y_text()
+- Enter your weight:
+# NumberInput_Prompt_xELf1y()
+[Activity
+    Text = ${NumberInput_Prompt_xELf1y_text()}
+]
+
+# NumberInput_Prompt_ztO0DQ()
+[Activity
+    Text = ${NumberInput_Prompt_ztO0DQ_text()}
+]
+
+# NumberInput_Prompt_ztO0DQ_text()
+- Enter your age:
+# SendActivity_g0ysx8()
+[Activity
+    Text = ${SendActivity_g0ysx8_text()}
+]
+
+# SendActivity_g0ysx8_text()
+- Sorry. I am looking for a value between 1 and 110.
+# SendActivity_h88z1o()
+[Activity
+    Text = ${SendActivity_h88z1o_text()}
+]
+
+# SendActivity_h88z1o_text()
+- BMI Calculations and insights are not accurate for this age.
+# SendActivity_V2KoY9()
+[Activity
+    Text = ${SendActivity_V2KoY9_text()}
+]
+
+# SendActivity_V2KoY9_text()
+- BMI Calculations and insights are not accurate for this age.
+# SendActivity_4sibCe_text()
+- BMI Calculations and insights are not accurate for this height.
+# SendActivity_4sibCe()
+[Activity
+    Text = ${SendActivity_4sibCe_text()}
+]
+
+# SendActivity_ERujcc_text()
+- BMI Calculations and insights are not accurate for this weight.
+# SendActivity_ERujcc()
+[Activity
+    Text = ${SendActivity_ERujcc_text()}
+]
+
+# SendActivity_m0bFeZ()
+[Activity
+    Text = ${SendActivity_m0bFeZ_text()}
+]
+
+# SendActivity_m0bFeZ_text()
+- Your BMI is ${dialog.result}. You are underweight. Your BMI must be around 18.5 to 24.9.
+# SendActivity_iClckO()
+[Activity
+    Text = ${SendActivity_iClckO_text()}
+]
+
+# SendActivity_iClckO_text()
+- Your BMI is ${dialog.result}. Your weight is apt. Your BMI is normal.
+# SendActivity_NbUYcY()
+[Activity
+    Text = ${SendActivity_NbUYcY_text()}
+]
+
+# SendActivity_NbUYcY_text()
+- Your BMI is ${dialog.result}. You are overweight. Your BMI must be around 18.5 to 24.9.
+# SendActivity_qW7e9H()
+[Activity
+    Text = ${SendActivity_qW7e9H_text()}
+]
+
+# SendActivity_qW7e9H_text()
+- Your BMI is ${dialog.result}. You are obese. Your BMI must be around 18.5 - 24.9. Please consider some serious llifestyle changes.
